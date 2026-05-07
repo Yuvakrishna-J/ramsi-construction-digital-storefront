@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ramsi Construction & Interiors - Building Dreams, Delivering Excellence in Residential, Commercial, and Interior Design projects for over 30 years.">
+    <title>Ramsi Construction & Interiors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="./images/logo.png" alt="Logo">
+        <span>Ramsi Construction & Interiors</span>
+      </div>
+      <div class="menu-toggle">
+        &#9776; <!-- Hamburger Icon -->
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+  <script>
+    
+
+    // Toggle the menu when the hamburger icon is clicked
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+  const nav = document.querySelector('header nav');
+  nav.classList.toggle('active');
+});
+
+const navLinks = document.querySelectorAll('header nav ul li a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const nav = document.querySelector('header nav');
+      nav.classList.remove('active');
+    });
+  });
+
+
+  </script>
+
+  
+    
+  
+  
+  
+
+    <section class="hero" id="home">
+      <div class="hero-background"></div> 
+      <div class="hero-content">
+        <h1>"Building Dreams, Delivering Excellence for Over 30 Years"</h1>
+        <div class="happy-customers-banner">
+          <span id="customer-count" class="count">0</span>
+          <span class="label">Happy Customers</span>
+        </div>
+        <p>Experience the perfect blend of craftsmanship, affordability, and world-class quality.</p>
+        <a href="https://forms.gle/QeeFCuLiUDieYoXd8" target="_blank" class="btn">Request a Quote</a>
+    
+        
+      </div>
+    </section>
+
+    <script>
+      function animateCountUp(id, end, duration = 2000) {
+        const element = document.getElementById(id);
+        let start = 0;
+        const increment = end / (duration / 17); // 60fps
+        const step = () => {
+          start += increment;
+          if (start < end) {
+            element.textContent = Math.floor(start);
+            requestAnimationFrame(step);
+          } else {
+            element.textContent = end.toLocaleString() + "+"; // with comma and plus
+          }
+        };
+        step();
+      }
+    
+      window.addEventListener("load", () => {
+        animateCountUp("customer-count", 5000, 2000);
+      });
+    </script>
+    
+    
+    
+
+    <section id="about">
+        <div class="about-content">
+            <div class="text">
+                <h2>About Us</h2>
+                <p>At Ramsi Construction and Interiors, we have been transforming spaces for over 30 years with a commitment to timely project completion, friendly customer service, and affordable pricing. Our goal is to deliver world-class quality in every project we undertake, backed by strong guarantees and warranties for complete peace of mind. We take pride in building lasting relationships with our clients through trust, craftsmanship, and a passion for excellence.</p>
+            </div>
+            <img src="./images/aboutus.png" alt="About Ramsi Construction & Interiors">
+        </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Key Projects</h2>
+      
+      <div class="main-projects">
+        <!-- Project 1 -->
+        <div class="project">
+          <div class="slideshow-container" id="slideshow1">
+            <img src="./project/construction/1.jpg" class="slide active">
+            <img src="./project/construction/2.jpg" class="slide">
+            <img src="./project/construction/3.jpg" class="slide">
+            <img src="./project/construction/4.jpg" class="slide">
+            <img src="./project/construction/5.jpg" class="slide">
+            <img src="./project/construction/6.jpg" class="slide">
+            <img src="./project/construction/7.jpg" class="slide">
+          </div>
+          <h3>Construction Works</h3>
+        </div>
+    
+        <!-- Project 2 -->
+        <div class="project">
+          <div class="slideshow-container" id="slideshow2">
+            <img src="./project/interior/project11.jpg" class="slide active">
+            <img src="./project/interior/project12.jpg" class="slide">
+            <img src="./project/interior/project13.jpg" class="slide">
+            <img src="./project/interior/project14.jpg" class="slide">
+            <img src="./project/interior/15.jpg" class="slide">
+            <img src="./project/interior/16.jpg" class="slide">
+            <img src="./project/interior/17.jpg" class="slide">
+          </div>
+          <h3>Interior Work</h3>
+        </div>
+    
+        <!-- Project 3 -->
+        <div class="project">
+          <div class="slideshow-container" id="slideshow3">
+            <img src="./project/commercial/1.jpg" class="slide active">
+            <img src="./project/commercial/2.jpg" class="slide">
+            <img src="./project/commercial/3.jpg" class="slide">
+            <img src="./project/commercial/4.jpg" class="slide">
+            <img src="./project/commercial/5.jpg" class="slide">
+            <img src="./project/commercial/6.jpg" class="slide">
+          </div>
+          <h3>Commercial Works</h3>
+        </div>
+      </div>
+    
+      <div class="view-all-projects">
+        <a href="all-projects.html" class="btn">View All Project Photos</a>
+      </div>
+      
+    </section>
+    
+
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service">
+                <h3>Residential Construction</h3>
+                <p>Building modern, sustainable, and premium homes with attention to detail.</p>
+            </div>
+            <div class="service">
+                <h3>Commercial Spaces</h3>
+                <p>Creating functional, stylish workspaces for offices, retail, and industries.</p>
+            </div>
+            <div class="service">
+                <h3>Interior Design</h3>
+                <p>Elegant and customized interiors that fit your style and comfort needs.</p>
+            </div>
+            <div class="service">
+              <h3>Building Lifting and Shifting</h3>
+              <p>Safe and efficient building lifting and shifting with guaranteed results and minimal disruption.</p>
+            </div>
+            <div class="service">
+                <h3>Renovation & Remodeling</h3>
+                <p>Upgrading and refreshing existing spaces to match modern trends and needs.</p>
+            </div>
+            <div class="service">
+              <h3>Carpentry Works</h3>
+              <p>"Expert carpentry for modular kitchens, wardrobes, and repairs, delivering quality craftsmanship for projects of all sizes.</p>
+            </div>
+            <div class="service">
+              <h3>Electrical & Plumbing Works</h3>
+              <p>Expert plumbing and electrical services for all project sizes, delivering safe and efficient solutions.</p>
+            </div>
+            <div class="service">
+                <h3>All Types of Maintenance Works</h3>
+                <p>We handle all civil works—construction, painting, tiling, and waterproofing—with professional quality and reliability.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="reviews" class="review-section">
+      <h2>Our Happy Clients 😊</h2>
+      <div class="review-gallery">
+        
+        <!-- Review Box 1 -->
+        <div class="review-box">
+          <div class="slideshow">
+            <img src="./reviews/rev7.jpg" class="slide" alt="Client Review 6">
+            <img src="./reviews/rev1.jpg" class="slide active" alt="Client Review 1">
+            <img src="./reviews/rev2.jpg" class="slide" alt="Client Review 2">
+            <img src="./reviews/rev3.jpg" class="slide active" alt="Client Review 3">
+          </div>
+        </div>
+    
+        <!-- Review Box 2 -->
+        <div class="review-box">
+          <div class="slideshow">
+            <img src="./reviews/rev6.jpg" class="slide" alt="Client Review 6">
+            <img src="./reviews/rev3.jpg" class="slide active" alt="Client Review 3">
+            <img src="./reviews/rev4.jpg" class="slide" alt="Client Review 4">
+            <img src="./reviews/rev1.jpg" class="slide active" alt="Client Review 1">
+          </div>
+        </div>
+    
+        <!-- Review Box 3 -->
+        <div class="review-box">
+          <div class="slideshow">
+            <img src="./reviews/rev1.jpg" class="slide active" alt="Client Review 1">
+            <img src="./reviews/rev5.jpg" class="slide active" alt="Client Review 5">
+            <img src="./reviews/rev6.jpg" class="slide" alt="Client Review 6">
+            <img src="./reviews/rev7.jpg" class="slide" alt="Client Review 6">
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    <script>
+      const slideshows = document.querySelectorAll('.slideshow');
+    
+      slideshows.forEach((slideshow) => {
+        const slides = slideshow.querySelectorAll('.slide');
+        let current = 0;
+    
+        setInterval(() => {
+          slides[current].classList.remove('active');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('active');
+        }, 3000); // Change every 3 seconds
+      });
+    </script>
+    
+    
+
+    <section id="contact">
+      <h2 class="section-title-contact">Get in Touch</h2>
+      <div class="contact-wrapper">
+          <!-- Contact Details (Left Side) -->
+          <div class="contact-info">
+              <p>📧 <a href="mailto:Ramsiconstruction30@gmail.com">Ramsiconstruction30@gmail.com</a></p>
+              <p>📞 <a href="tel:+919840153940">+91 9840153940</a></p>
+              <p>📞 <a href="tel:+919841373531">+91 9841373531</a></p>
+              <p>📍 No,39/18, Lake View Road, Kottur, Chennai-600085</p>
+              <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/ramsi_construction_interiors" target="_blank">@ramsiconstruction</a></p>
+          </div>
+
+          <div class="quote-button-container">
+            <a href="https://forms.gle/QeeFCuLiUDieYoXd8" target="_blank" class="quote-button">
+              Request a Quote
+            </a>
+          </div>
+  
+          
+          
+      </div>
+  </section>
+  
+
+    
+    
+    <footer>
+        &copy; 2025 Ramsi Construction & Interiors. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+    
+<script>
+  function startSlideshow(slideshowId) {
+    const slides = document.querySelectorAll(`#${slideshowId} .slide`);
+    let index = 0;
+  
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000); // Change image every 3 seconds
+  }
+  
+  startSlideshow('slideshow1');
+  startSlideshow('slideshow2');
+  startSlideshow('slideshow3');
+  </script>
+  
+  
+  
+</body>
+</html>
